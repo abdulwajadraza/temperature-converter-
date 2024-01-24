@@ -1,0 +1,28 @@
+# defining a function to convert temprature from Fohrenhiet to Celsius and vice versa 
+
+def convert_temp ():
+
+#taking tempratur value and unit as input from user 
+  temp_given = float(input("Enter Temprature here: "))
+  temp_unit = input("Enter Temprature Unit 'F' or 'C': ").upper()
+
+#applying condition to check the input unit and function accordingly
+  if temp_unit == "F":
+    #if the given temprature is in fohrenhiet, it will be converted in celsius
+    temp_in_cel = (temp_given-32)*5/9
+    print(f"The temprature in Celsius is {temp_in_cel:.2f}°C")
+
+#applying condition to check the input unit and function accordingly
+  elif temp_unit == "C":
+    #if the given temprature is in celsius, it will be converted in fohrenhiet
+     temp_in_forn = (temp_given+32)*5/9
+     print(f"The temprature in Fohrenhiet is {temp_in_forn:.2f}°F")
+
+  else: 
+    print("Enter a valid Tempratur Unit")
+  
+  print("\nThank you for using our Program!")
+
+
+#calling the function
+convert_temp()
