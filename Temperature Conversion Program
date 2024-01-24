@@ -1,28 +1,24 @@
-# defining a function to convert temprature from Fohrenhiet to Celsius and vice versa 
+# Defining a function to convert temperature from Fahrenheit to Celsius and vice versa 
+def convert_temp():
+    # Taking temperature value and unit as input from the user 
+    temp_given = float(input("Enter Temperature here: "))
+    temp_unit = input("Enter Temperature Unit 'F' or 'C': ").upper()
 
-def convert_temp ():
+    # Applying conditions to check the input unit and function accordingly
+    if temp_unit == "F":
+        # If the given temperature is in Fahrenheit, it will be converted to Celsius
+        temp_in_cel = (temp_given - 32) * 5/9
+        print(f"The temperature in Celsius is {temp_in_cel:.2f}°C")
 
-#taking tempratur value and unit as input from user 
-  temp_given = float(input("Enter Temprature here: "))
-  temp_unit = input("Enter Temprature Unit 'F' or 'C': ").upper()
+    elif temp_unit == "C":
+        # If the given temperature is in Celsius, it will be converted to Fahrenheit
+        temp_in_forn = (temp_given * 9/5) + 32
+        print(f"The temperature in Fahrenheit is {temp_in_forn:.2f}°F")
 
-#applying condition to check the input unit and function accordingly
-  if temp_unit == "F":
-    #if the given temprature is in fohrenhiet, it will be converted in celsius
-    temp_in_cel = (temp_given-32)*5/9
-    print(f"The temprature in Celsius is {temp_in_cel:.2f}°C")
-
-#applying condition to check the input unit and function accordingly
-  elif temp_unit == "C":
-    #if the given temprature is in celsius, it will be converted in fohrenhiet
-     temp_in_forn = (temp_given+32)*5/9
-     print(f"The temprature in Fohrenhiet is {temp_in_forn:.2f}°F")
-
-  else: 
-    print("Enter a valid Tempratur Unit")
+    else: 
+        print("Enter a valid Temperature Unit")
   
-  print("\nThank you for using our Program!")
+    print("\nThank you for using our Program!")
 
-
-#calling the function
+# Calling the function
 convert_temp()
